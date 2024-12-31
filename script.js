@@ -1,4 +1,5 @@
 let promptGenerator = document.getElementById('promptActivator');
+let clear = document.getElementById('clear');
 let pageContainer = document.getElementById('container');
 
 
@@ -31,8 +32,15 @@ function handleClick(){
         }
         let squares = document.querySelectorAll('.square');
         squares.forEach((individual) => {
+            let opacity = 80;
             individual.addEventListener('mouseover', (e)=>{
-            e.target.style.backgroundColor = 'black'
+            e.target.style.backgroundColor = `hsl(0, 0%, ${opacity}%)`
+            opacity -= 10;
+            })
+        })
+        clear.addEventListener('click',()=>{
+            squares.forEach((individual) => {
+                individual.style.backgroundColor = 'white'
             })
         })
         promptGenerator.removeEventListener('click', handleClick)
