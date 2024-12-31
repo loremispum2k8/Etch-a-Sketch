@@ -37,8 +37,8 @@
     width: 100vw;
 }
 .squaresContainer{
-    width: 580px;
-    height: 580px;
+    width: 980px;
+    height: 980px;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
